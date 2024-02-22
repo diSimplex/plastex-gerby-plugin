@@ -13,6 +13,7 @@ import os, re, shutil
 import plasTeX
 from plasTeX.Renderers.PageTemplate import Renderer as _Renderer
 from plasTeX.Renderers import Renderable, mixin, unmix
+from gerbyPlasTeX.Renderers.Gerby.Config import addConfig
 from plasTeX.DOM import Node
 import json
 
@@ -239,6 +240,8 @@ class Gerby(_Renderer):
     _Renderer.loadTemplates(self, document)
     rendererdata = document.rendererdata["gerby"] = dict()
     config = document.config
+    if 'gerby' not in config:
+      addConfig(config)
 
     # split-level must always be -2 to not create any clutter files
     config["files"]["split-level"] = -2

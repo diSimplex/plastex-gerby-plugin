@@ -1,5 +1,5 @@
 [project]
-name = "gerbyPlasTeX"
+name = "plastex_gerby_plugin"
 version = "0.0.1"
 description = "A PlasTeX plugin implementing the Gerby project in native PlasTeX tool."
 authors = [
