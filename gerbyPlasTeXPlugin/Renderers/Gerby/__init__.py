@@ -13,7 +13,7 @@ import os, re, shutil
 import plasTeX
 from plasTeX.Renderers.PageTemplate import Renderer as _Renderer
 from plasTeX.Renderers import Renderable, mixin, unmix
-from gerbyPlasTeX.Renderers.Gerby.Config import addConfig
+from gerbyPlasTeXPlugin.Renderers.Gerby.Config import addConfig
 from plasTeX.DOM import Node
 import json
 
