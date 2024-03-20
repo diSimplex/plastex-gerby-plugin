@@ -13,5 +13,7 @@ def addConfig(config):
 def updateCommandLineOptions(data):
   pluginLog.info("Hello from Config PlasTeX Plugin : updateCommandLineOptions")
 
-def initPlugin(config):
+def initPlugin(config, texStream, texDocument):
   pluginLog.info("Hello from Config PlasTeX Plugin : initPlugin")
+  from gerbyPlasTeXPlugin import BaseLaTeXMacros
+  texDocument.context.importMacros(vars(BaseLaTeXMacros))
