@@ -11,7 +11,8 @@ How to test this (for now):
 
 import os, re, shutil
 import plasTeX
-from plasTeX.Renderers.PageTemplate import Renderer as _Renderer
+#from plasTeX.Renderers.PageTemplate import Renderer as _Renderer
+from plasTeX.Renderers.HTML5 import HTML5 as _Renderer
 from plasTeX.Renderers import Renderable, mixin, unmix
 from gerbyPlasTeXPlugin.Renderers.Gerby.Config import addConfig
 from plasTeX.DOM import Node

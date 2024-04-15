@@ -1,5 +1,0 @@
-name: verbatim
-<pre><code>{{ obj }}</code></pre>
-
-name: verb
-<code>{{ obj }}</code>
