@@ -14,7 +14,7 @@ def updateConfig(config):
   pluginLog.info("Hello from Gerby Config PlasTeX Plugin : updateConfig")
 
 
-def initPlugin(config, texStream, texDocument):
+def initPlugin(config, fileName, texStream, texDocument):
   pluginLog.info("Hello from Gerby Config PlasTeX Plugin : initPlugin")
   from gerbyPlasTeXPlugin import BaseLaTeXMacros
   texDocument.context.importMacros(vars(BaseLaTeXMacros))
