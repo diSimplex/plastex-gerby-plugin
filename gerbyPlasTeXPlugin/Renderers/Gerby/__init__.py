@@ -118,7 +118,10 @@ def decorateTags(node, labels):
 
 def loadTags(document):
   """Read the tags file and construct the tags and labels dictionary"""
-  with open(document.userdata["working-dir"] + "/" + document.config["gerby"]["tags"]) as f:
+  tagsPath = document.config["gerby"]["tags"]
+  if not tagsPath.startswith(os.sep) :
+    tagsPath = os.path.join(document.userdata["working-dir"], tagsPath)
+  with open(tagsPath) as f:
     content = f.readlines()
 
   document.userdata["tags"] = dict()   # tag to label
