@@ -18,8 +18,7 @@ from gerbyPlasTeXPlugin.Renderers.Gerby.Config import addConfig
 from plasTeX.DOM import Node
 import json
 
-log = plasTeX.Logging.getLogger()
-
+log = plasTeX.Logging.getLogger('gerby')
 
 # give the closest theorem environment to a node
 def searchPrecedingTheorem(linear, node):
